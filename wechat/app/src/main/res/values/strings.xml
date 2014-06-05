@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">wechat</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="sign_up_label">Sign up</string>
+    <string name="forgot_password_label">Forget password?</string>
+    <string name="password_hint_label">Please enter password</string>
+
+</resources>

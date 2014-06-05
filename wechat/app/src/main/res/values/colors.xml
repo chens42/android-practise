@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yellow">#fffaff18</color>
+    <color name="login_button_black_text">#000000</color>
+    <color name="password_text_view_hint">#ADD8E6</color>
+    <color name="transparent">#00000000</color>
+    <color name="listView_hold_color">#34669900</color>
+    <color name="listView_initial_color">#FFFFFF</color>
+</resources>

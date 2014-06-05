@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.wechat.app.activity.MainActivity">
+    <item
+        android:id="@+id/change_Account"
+        app:showAsAction="ifRoom"
+        android:showAsAction="ifRoom"
+        android:title="a"
+        android:icon="@drawable/ic_action_search"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/change_Account2"
+        app:showAsAction="ifRoom"
+        android:showAsAction="ifRoom"
+        android:title="Change Account"
+        android:icon="@drawable/ic_add"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/change_Account3"
+        app:showAsAction="ifRoom"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_overflow"
+        android:title="Change Account"
+        tools:ignore="AppCompatResource" />
+</menu>
