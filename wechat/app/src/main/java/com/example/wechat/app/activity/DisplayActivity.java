@@ -9,9 +9,6 @@ import android.view.Menu;
 
 import com.example.wechat.app.R;
 import com.example.wechat.app.fragment.adapter.TabsPagerAdapter;
-import com.example.wechat.app.model.Chats;
-
-import java.util.ArrayList;
 
 public class DisplayActivity extends FragmentActivity implements ActionBar.TabListener{
     private TabsPagerAdapter tabsPagerAdapter;

@@ -4,11 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.wechat.app.activity.DisplayActivity;
 import com.example.wechat.app.fragment.ChatsFragment;
 import com.example.wechat.app.fragment.DiscoverFragment;
 import com.example.wechat.app.fragment.ContactsFragment;
-import com.example.wechat.app.model.Chats;
+import com.example.wechat.app.model.Chat;
 
 import java.util.ArrayList;
 
@@ -16,11 +15,11 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     private ChatsFragment chatsFragment;
     private DiscoverFragment discoverFragment;
     private ContactsFragment contactsFragment;
-    private ArrayList<Chats> chatList = new ArrayList<Chats>();
+    private ArrayList<Chat> chatList = new ArrayList<Chat>();
 
     public TabsPagerAdapter(FragmentManager fm) {
         super(fm);
-        Chats chats = new Chats("wen", "hello world", "06/06/2013", true);
+        Chat chats = new Chat("wen", "hello world", "06/06/2013", true);
         chatList.add(chats);
         chatList.add(chats);
         chatList.add(chats);
@@ -28,7 +27,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
         chatList.add(chats);
         chatList.add(chats);
         chatList.add(chats);
-        chats = new Chats("wen", "hello world", "06/06/2013", false);
+        chats = new Chat("wen", "hello world", "06/06/2013", false);
         chatList.add(chats);
         chatList.add(chats);
         chatList.add(chats);
@@ -41,7 +40,7 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0:
                 Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList(ChatsFragment.ARRAY_LIST, chatList);
+                bundle.putParcelableArrayList(ChatsFragment.CHAT_ARRAY_LIST, chatList);
                 chatsFragment = new ChatsFragment();
                 chatsFragment.setArguments(bundle);
                 return chatsFragment;

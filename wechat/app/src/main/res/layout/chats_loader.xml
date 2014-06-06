@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/progressBarLoading"
+    android:minHeight="32px"
+    android:maxHeight="32px"
+    android:minWidth="32px"
+    android:maxWidth="32px"
+    android:layout_width="32px"
+    android:layout_height="32px"
+    android:indeterminateDrawable="@anim/chats_loading_progress_bar"
+    />

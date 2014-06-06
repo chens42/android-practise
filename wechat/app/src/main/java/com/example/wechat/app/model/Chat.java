@@ -3,13 +3,13 @@ package com.example.wechat.app.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Chats implements Parcelable {
+public class Chat implements Parcelable {
     private String name;
     private String msg;
     private String date;
     private boolean isFrend;
 
-    public Chats(String name, String msg, String date, boolean isFrend) {
+    public Chat(String name, String msg, String date, boolean isFrend) {
         this.name = name;
         this.msg = msg;
         this.date = date;
@@ -40,7 +40,7 @@ public class Chats implements Parcelable {
         parcel.writeString(date);
     }
 
-    public boolean isFrend() {
+    public boolean isFriend() {
         return isFrend;
     }
 }
