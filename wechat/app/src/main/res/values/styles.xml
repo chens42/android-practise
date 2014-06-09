@@ -66,4 +66,14 @@
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Example</item>
     </style>
 
+    <style name="match_parent_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wrap_content_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>

@@ -79,7 +79,7 @@
                 android:id="@+id/sign_up"
                 android:layout_centerInParent="true"
                 android:text="@string/sign_up_label"
-                android:shadowColor="@color/login_button_black_text"/>
+                android:shadowColor="@color/black"/>
         </RelativeLayout>
 
     </LinearLayout>

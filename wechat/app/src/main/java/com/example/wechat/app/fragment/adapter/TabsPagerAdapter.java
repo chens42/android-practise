@@ -38,13 +38,13 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
     public android.support.v4.app.Fragment getItem(int position) {
 
         switch (position) {
-            case 0:
+            case 1:
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList(ChatsFragment.CHAT_ARRAY_LIST, chatList);
                 chatsFragment = new ChatsFragment();
                 chatsFragment.setArguments(bundle);
                 return chatsFragment;
-            case 1:
+            case 0:
                 if (discoverFragment == null) {
                     discoverFragment = new DiscoverFragment();
                 }

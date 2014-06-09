@@ -11,9 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 
 import com.example.wechat.app.R;
+import com.example.wechat.app.fragment.holder.ChatListHolder;
 import com.example.wechat.app.model.Chat;
 
 import java.util.ArrayList;
@@ -25,11 +25,11 @@ public class ChatsFragment extends Fragment {
     private ListView listView;
     private ArrayList<Chat> arrayList;
     private ChatList adapter;
-    private ProgressBar chatsLoader;
+    private View chatsLoaderLinearLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.webchat_fragment, container, false);
+        rootView = inflater.inflate(R.layout.wechat_fragment, container, false);
         Bundle bundle = getArguments();
         ArrayList<Parcelable> parcelableArrayList = bundle.getParcelableArrayList(CHAT_ARRAY_LIST);
         arrayList = new ArrayList<Chat>();
@@ -39,8 +39,8 @@ public class ChatsFragment extends Fragment {
         }
         listView = (ListView) rootView.findViewById(R.id.display);
         adapter = new ChatList(getActivity(), R.layout.chat_row, arrayList);
-        chatsLoader = (ProgressBar) inflater.inflate(R.layout.chats_loader, null);
-        listView.addFooterView(chatsLoader);
+        chatsLoaderLinearLayout =  inflater.inflate(R.layout.chats_loader, null);
+        listView.addFooterView(chatsLoaderLinearLayout);
         listView.setAdapter(adapter);
         return rootView;
     }
@@ -69,7 +69,6 @@ public class ChatsFragment extends Fragment {
             if (position == (arrayList.size() - 1)) {
                 new LoadData().execute();
             }
-
             return row;
         }
     }
@@ -77,7 +76,7 @@ public class ChatsFragment extends Fragment {
     class LoadData extends AsyncTask<Void, Void, ArrayList<Chat>> {
         @Override
         protected void onPreExecute() {
-            chatsLoader.setVisibility(View.VISIBLE);
+            chatsLoaderLinearLayout.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -102,7 +101,7 @@ public class ChatsFragment extends Fragment {
 
         @Override
         protected void onPostExecute(ArrayList<Chat> chats) {
-            chatsLoader.setVisibility(View.INVISIBLE);
+            chatsLoaderLinearLayout.setVisibility(View.INVISIBLE);
             arrayList.addAll(chats);
             adapter.notifyDataSetChanged();
         }

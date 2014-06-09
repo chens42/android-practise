@@ -1,4 +1,4 @@
-package com.example.wechat.app.fragment;
+package com.example.wechat.app.fragment.holder;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,9 +7,7 @@ import android.widget.TextView;
 import com.example.wechat.app.R;
 import com.example.wechat.app.model.Chat;
 
-/**
- * Created by shaojin on 03/06/14.
- */
+
 public class ChatListHolder {
     TextView name;
     TextView msg;

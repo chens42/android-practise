@@ -12,7 +12,7 @@ public class ContactsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.webchat_fragment, container, false);
+        return inflater.inflate(R.layout.wechat_fragment, container, false);
 
     }
 
